@@ -1,6 +1,6 @@
 import fastify from 'fastify';
 
-import { GetWithDelay, GetXmlResponse } from './routes';
+import { GetWithDelay, GetXmlResponse, SimplePost } from './routes';
 
 const server = fastify({
   logger: {
@@ -10,6 +10,7 @@ const server = fastify({
 
 server.route(GetWithDelay);
 server.route(GetXmlResponse);
+server.route(SimplePost);
 
 export const start = async () => {
   try {
