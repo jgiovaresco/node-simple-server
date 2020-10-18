@@ -1,6 +1,6 @@
 import fastify from 'fastify';
 
-import { GetWithDelay } from './routes';
+import { GetWithDelay, GetXmlResponse } from './routes';
 
 const server = fastify({
   logger: {
@@ -9,6 +9,7 @@ const server = fastify({
 });
 
 server.route(GetWithDelay);
+server.route(GetXmlResponse);
 
 export const start = async () => {
   try {
