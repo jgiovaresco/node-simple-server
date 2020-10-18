@@ -1,10 +1,14 @@
 import fastify from 'fastify';
 
+import { GetWithDelay } from './routes';
+
 const server = fastify({
   logger: {
     prettyPrint: true,
   },
 });
+
+server.route(GetWithDelay);
 
 export const start = async () => {
   try {
