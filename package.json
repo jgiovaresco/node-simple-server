@@ -10,7 +10,9 @@
     "lint:commit": "commitlint --from=$( git rev-list --tags --max-count=1 )",
     "lint:eslint": "eslint --ext ts .",
     "lint:prettier": "prettier -l {bin,src}/**/*",
-    "lint:prettier:fix": "prettier --write {examples,src,test}/**/*"
+    "lint:prettier:fix": "prettier --write {examples,src,test}/**/*",
+    "start": "ts-node bin/start.ts",
+    "start:watch": "nodemon --watch '**/*.ts' --exec 'ts-node' bin/start.ts"
   },
   "commitlint": {
     "extends": [
@@ -48,6 +50,7 @@
     "eslint-plugin-prettier": "^3.1.4",
     "husky": "^4.3.0",
     "lint-staged": "^10.4.0",
+    "nodemon": "^2.0.5",
     "prettier": "^2.1.2",
     "typescript": "^4.0.3"
   },
