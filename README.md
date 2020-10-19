@@ -16,3 +16,9 @@ yarn start
 ```
 yarn start:watch
 ```
+
+## Run a simple http proxy
+
+```
+yarn run:proxy
+```
