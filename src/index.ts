@@ -1,7 +1,9 @@
 import fastify from 'fastify';
 import fastifyMultipart from 'fastify-multipart';
+import fastifyCookie from 'fastify-cookie';
 
 import {
+  GetWithCookies,
   GetWithDelay,
   GetXmlResponse,
   MultipartPost,
@@ -15,7 +17,9 @@ async function newServer() {
     },
   });
   await server.register(fastifyMultipart, { attachFieldsToBody: true });
+  await server.register(fastifyCookie, { secret: 'my-secret' });
 
+  server.route(GetWithCookies);
   server.route(GetWithDelay);
   server.route(GetXmlResponse);
   server.route(MultipartPost);
