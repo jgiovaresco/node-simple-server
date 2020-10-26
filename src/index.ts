@@ -7,6 +7,7 @@ import {
   GetWithDelay,
   GetXmlResponse,
   MultipartPost,
+  SimpleGet,
   SimplePost,
 } from './routes';
 
@@ -23,6 +24,7 @@ async function newServer() {
   server.route(GetWithDelay);
   server.route(GetXmlResponse);
   server.route(MultipartPost);
+  server.route(SimpleGet);
   server.route(SimplePost);
 
   return server;
