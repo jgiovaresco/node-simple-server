@@ -3,6 +3,7 @@ import fastifyMultipart from 'fastify-multipart';
 import fastifyCookie from 'fastify-cookie';
 
 import {
+  GetWith301Redirect,
   GetWithCookies,
   GetWithDelay,
   GetXmlResponse,
@@ -30,6 +31,7 @@ async function newServer() {
 
   server.route(DigestSimplePost);
 
+  server.route(GetWith301Redirect);
   server.route(GetWithCookies);
   server.route(GetWithDelay);
   server.route(GetXmlResponse);
