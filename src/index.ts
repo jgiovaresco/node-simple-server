@@ -10,6 +10,8 @@ import {
   SimpleGet,
   SimplePost,
 } from './routes';
+import digestAuth from './plugins/digest-auth.plugin';
+import { DigestSimplePost } from './routes/auth';
 
 async function newServer() {
   const server = fastify({
@@ -19,6 +21,14 @@ async function newServer() {
   });
   await server.register(fastifyMultipart, { attachFieldsToBody: true });
   await server.register(fastifyCookie, { secret: 'my-secret' });
+  await server.register(digestAuth, {
+    prefix: '/digest',
+    username: 'guest',
+    password: 'guest',
+    realm: 'Digest Auth',
+  });
+
+  server.route(DigestSimplePost);
 
   server.route(GetWithCookies);
   server.route(GetWithDelay);

@@ -60,6 +60,7 @@
     "fastify": "^3.6.0",
     "fastify-cookie": "^4.1.0",
     "fastify-multipart": "^3.2.1",
+    "fastify-plugin": "^3.0.0",
     "http-proxy": "^1.18.1",
     "pino-pretty": "^4.3.0",
     "ts-node": "^9.0.0"
