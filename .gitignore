@@ -29,3 +29,9 @@ coverage*
 
 # Docker production environment
 .env.*
+
+# Yarn
+/.yarn/*
+!/.yarn/releases
+!/.yarn/plugins
+!/.yarn/sdks
