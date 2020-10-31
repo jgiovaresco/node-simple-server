@@ -1,6 +1,8 @@
 import fastify from 'fastify';
+import fastifyFormbody from 'fastify-formbody';
 import fastifyMultipart from 'fastify-multipart';
 import fastifyCookie from 'fastify-cookie';
+import fastifyRawBody from 'fastify-raw-body';
 
 import {
   GetWith301Redirect,
@@ -10,6 +12,7 @@ import {
   MultipartPost,
   SimpleGet,
   SimplePost,
+  UrlEncodedPost,
 } from './routes';
 import digestAuth from './plugins/digest-auth.plugin';
 import { DigestSimplePost } from './routes/auth';
@@ -20,6 +23,8 @@ async function newServer() {
       prettyPrint: true,
     },
   });
+  await server.register(fastifyRawBody, { global: false });
+  await server.register(fastifyFormbody);
   await server.register(fastifyMultipart, { attachFieldsToBody: true });
   await server.register(fastifyCookie, { secret: 'my-secret' });
   await server.register(digestAuth, {
@@ -38,6 +43,7 @@ async function newServer() {
   server.route(MultipartPost);
   server.route(SimpleGet);
   server.route(SimplePost);
+  server.route(UrlEncodedPost);
 
   return server;
 }

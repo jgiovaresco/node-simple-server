@@ -5,3 +5,4 @@ export * from './get-simple';
 export * from './get-xml-response';
 export * from './post-multipart';
 export * from './post-simple';
+export * from './post-urlencoded';
