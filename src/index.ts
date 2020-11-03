@@ -8,6 +8,7 @@ import {
   GetWith301Redirect,
   GetWithCookies,
   GetWithDelay,
+  GetWithHtmlAndMetaRefresh,
   GetXmlResponse,
   MultipartPost,
   SimpleGet,
@@ -39,6 +40,7 @@ async function newServer() {
   server.route(GetWith301Redirect);
   server.route(GetWithCookies);
   server.route(GetWithDelay);
+  server.route(GetWithHtmlAndMetaRefresh);
   server.route(GetXmlResponse);
   server.route(MultipartPost);
   server.route(SimpleGet);
