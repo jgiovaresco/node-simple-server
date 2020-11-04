@@ -6,7 +6,7 @@ import {
 import { RouteGenericInterface, RouteOptions } from 'fastify/types/route';
 
 interface RouteInterface extends RouteGenericInterface {
-  Querystring: { delaySec: string };
+  Querystring: unknown;
 }
 
 export const SimpleGet: RouteOptions<
@@ -17,19 +17,10 @@ export const SimpleGet: RouteOptions<
 > = {
   method: 'GET',
   url: '/get',
-  schema: {
-    response: {
-      200: {
-        type: 'object',
-        properties: {
-          hello: { type: 'string' },
-        },
-      },
-    },
-  },
-  handler: (request, reply) => {
-    request.log.info(request.headers, '---> headers ');
-
-    reply.send({ hello: 'world' });
+  handler: request => {
+    return Promise.resolve({
+      headers: request.headers,
+      query: request.query,
+    });
   },
 };
