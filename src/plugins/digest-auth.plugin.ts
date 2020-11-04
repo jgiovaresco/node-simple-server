@@ -16,7 +16,7 @@ const digestAuthPlugin: FastifyPluginCallback<DigestAuthOptions> = async (
   next,
 ) => {
   instance.addHook('onRequest', (req, reply, done) => {
-    if (!isAppliable(req.routerPath, options)) {
+    if (!isAppliable(req.routerPath ?? '', options)) {
       done();
       return;
     }
