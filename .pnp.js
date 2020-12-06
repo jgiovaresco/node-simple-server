@@ -39,10 +39,12 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           "packageDependencies": [
             ["@commitlint/cli", "npm:11.0.0"],
             ["@commitlint/config-conventional", "npm:11.0.0"],
+            ["@types/basic-auth", "npm:1.1.3"],
             ["@types/http-proxy", "npm:1.17.4"],
             ["@types/node", "npm:14.11.10"],
             ["@typescript-eslint/eslint-plugin", "virtual:2f9795d1ec8d417860a24c9c72eaaef310f573351023662f4f34ec5613d58d16c45212fce50a6a8b096b7c30f39614358ca69e121fe4a23d0741e5cc95ef7630#npm:4.4.1"],
             ["@typescript-eslint/parser", "virtual:2f9795d1ec8d417860a24c9c72eaaef310f573351023662f4f34ec5613d58d16c45212fce50a6a8b096b7c30f39614358ca69e121fe4a23d0741e5cc95ef7630#npm:4.4.1"],
+            ["basic-auth", "npm:2.0.1"],
             ["eslint", "npm:7.11.0"],
             ["eslint-config-prettier", "virtual:2f9795d1ec8d417860a24c9c72eaaef310f573351023662f4f34ec5613d58d16c45212fce50a6a8b096b7c30f39614358ca69e121fe4a23d0741e5cc95ef7630#npm:6.13.0"],
             ["eslint-plugin-prettier", "virtual:2f9795d1ec8d417860a24c9c72eaaef310f573351023662f4f34ec5613d58d16c45212fce50a6a8b096b7c30f39614358ca69e121fe4a23d0741e5cc95ef7630#npm:3.1.4"],
@@ -367,6 +369,16 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           "packageDependencies": [
             ["@szmarczak/http-timer", "npm:1.1.2"],
             ["defer-to-connect", "npm:1.1.3"]
+          ],
+          "linkType": "HARD",
+        }]
+      ]],
+      ["@types/basic-auth", [
+        ["npm:1.1.3", {
+          "packageLocation": "./.yarn/cache/@types-basic-auth-npm-1.1.3-f8d5471ba8-97db2c87ee.zip/node_modules/@types/basic-auth/",
+          "packageDependencies": [
+            ["@types/basic-auth", "npm:1.1.3"],
+            ["@types/node", "npm:14.11.10"]
           ],
           "linkType": "HARD",
         }]
@@ -931,6 +943,16 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           "packageLocation": "./.yarn/cache/balanced-match-npm-1.0.0-951a2ad706-f515a605fe.zip/node_modules/balanced-match/",
           "packageDependencies": [
             ["balanced-match", "npm:1.0.0"]
+          ],
+          "linkType": "HARD",
+        }]
+      ]],
+      ["basic-auth", [
+        ["npm:2.0.1", {
+          "packageLocation": "./.yarn/cache/basic-auth-npm-2.0.1-f1627ef330-8ba373742c.zip/node_modules/basic-auth/",
+          "packageDependencies": [
+            ["basic-auth", "npm:2.0.1"],
+            ["safe-buffer", "npm:5.1.2"]
           ],
           "linkType": "HARD",
         }]
@@ -3650,10 +3672,12 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["node-simple-server", "workspace:."],
             ["@commitlint/cli", "npm:11.0.0"],
             ["@commitlint/config-conventional", "npm:11.0.0"],
+            ["@types/basic-auth", "npm:1.1.3"],
             ["@types/http-proxy", "npm:1.17.4"],
             ["@types/node", "npm:14.11.10"],
             ["@typescript-eslint/eslint-plugin", "virtual:2f9795d1ec8d417860a24c9c72eaaef310f573351023662f4f34ec5613d58d16c45212fce50a6a8b096b7c30f39614358ca69e121fe4a23d0741e5cc95ef7630#npm:4.4.1"],
             ["@typescript-eslint/parser", "virtual:2f9795d1ec8d417860a24c9c72eaaef310f573351023662f4f34ec5613d58d16c45212fce50a6a8b096b7c30f39614358ca69e121fe4a23d0741e5cc95ef7630#npm:4.4.1"],
+            ["basic-auth", "npm:2.0.1"],
             ["eslint", "npm:7.11.0"],
             ["eslint-config-prettier", "virtual:2f9795d1ec8d417860a24c9c72eaaef310f573351023662f4f34ec5613d58d16c45212fce50a6a8b096b7c30f39614358ca69e121fe4a23d0741e5cc95ef7630#npm:6.13.0"],
             ["eslint-plugin-prettier", "virtual:2f9795d1ec8d417860a24c9c72eaaef310f573351023662f4f34ec5613d58d16c45212fce50a6a8b096b7c30f39614358ca69e121fe4a23d0741e5cc95ef7630#npm:3.1.4"],
